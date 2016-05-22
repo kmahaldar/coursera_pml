@@ -81,8 +81,8 @@ The testing data set contains 20 observations and 53 variables.
 
 ## Data spliting
 
-### The training data needs to be splitted to a training set and a validaion set in order to take care of out-of-sample errors.
-### We are using a 70:30 ratio for training data set and validation data set
+The training data needs to be splitted to a training set and a validaion set in order to take care of out-of-sample errors.
+We are using a 70:30 ratio for training data set and validation data set
 ```{r}
 set.seed(7826) 
 inTrain <- createDataPartition(trainingData$classe, p = 0.7, list = FALSE)
@@ -94,24 +94,23 @@ dim(finalTrainingData)
 dim(validationData)
 ### [1] 5885   53
 ```
-### The final training data set contains 13737 observations and 53 variables.
-### The validation data set contains 5885 observations and 53 variables. 
+The final training data set contains 13737 observations and 53 variables.
+The validation data set contains 5885 observations and 53 variables. 
 
 ## Prediction 
-### Apply prediction algorithm on testing data set
 
-### There are mutiple prediction algorithm which can be selected
-### In this project we have selected Random Forest algorithm 
-### actually I have tried many algorithms and finally selected random Forest as it produces best accuracy among the tried methdods
-### because it automatically selects important variables and is robust to correlated covariates & outliers in general. 
-
-
-### We should use 5-fold cross validation when applying the algorithm.
-### default setting in trainControl function is 10, set the vallue as 5
+We should use 5-fold cross validation when applying the algorithm.
+default setting in trainControl function is 10, set the vallue as 5
 ```{r}
 controlRf <- trainControl(method="cv", 5)
 ```
-### apply the alogorithm 
+
+### Apply prediction algorithm on testing data set (Random Forest)
+
+There are mutiple prediction algorithm which can be selected
+In this project we have selected Random Forest algorithm 
+Actually I have tried many algorithms and finally selected random Forest as it produces best accuracy among the tried methdods because it automatically selects important variables and is robust to correlated covariates & outliers in general. 
+
 ```{r}
 modelRf <- train(classe ~., data=finalTrainingData, method="rf", trControl=controlRf, ntree=250)
 print(modelRf, digits = 4)
@@ -197,7 +196,7 @@ print (result)
 ```
 
 ## Appendix
-## Draw few plots
+Draw few plots
 
 ### Correlation Matrix 
 ```{r}
