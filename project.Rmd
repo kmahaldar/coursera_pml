@@ -203,13 +203,13 @@ Draw few plots
 plot1 <- cor(finalTrainingData[, -length(names(finalTrainingData))]) 
 corrplot(plot1, method="color")
 ```
-![Correlation Matrix](/plots/cor_matrix.png)
+![Correlation Matrix](plots/cor_matrix.png)
 
 ### Decision Tree 
 ```
 treeModel <- rpart(classe ~ ., data=finalTrainingData, method="class")
 prp(treeModel) 
 ```
-![Decision Tree](/plots/treemodel.png)
+![Decision Tree](plots/treemodel.png)
 
 ##  End of Project report
