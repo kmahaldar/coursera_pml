@@ -34,7 +34,7 @@ library(repmis);
 
 ## Data Importing
 
-### Import from the url
+Import from the url
 ```{r} 
 # trainingURL <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
 # testingURL <- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
@@ -42,7 +42,7 @@ library(repmis);
 # testing <- source_data(testingURL, na.strings = c("NA", "#DIV/0!", ""), header = TRUE)
 ``` 
 
-### Alternative -  download the data in local machine and import data from local file
+Alternative -  download the data in local machine and import data from local file
 ```{r} 
 training <- read.csv("F:/Data Science/mc/programs/week4/pml-training.csv", na.strings = c("NA", ""))
 testing <- read.csv("F:/Data Science/mc/programs/week4/pml-testing.csv", na.strings = c("NA", ""))
@@ -52,24 +52,20 @@ dim(training)
 dim(testing)
 ##### [1]  20 160
 ``` 
-
-## The training data set contains 19622 observations and 160 variables. 
-## The testing data set contains 20 observations and 160 variables.
-## The "classe" variable in the training set is the outcome to predict.
+The training data set contains 19622 observations and 160 variables. 
+The testing data set contains 20 observations and 160 variables.
+The "classe" variable in the training set is the outcome to predict.
 
 
 ## Data cleaning
 
-### Remove columns that contain NA missing values
+Remove columns that contain NA missing values
 ```{r}
 training <- training[, colSums(is.na(training)) == 0]
 testing <- testing[, colSums(is.na(testing)) == 0]
 ``` 
-## Remove variable that does not contribute much to predict the the outcome 'classe'.
-
-### Open the data csv file in xls
-### You can see that the index column, user_name, raw_timestamp_part_1, raw_timestamp_part_2, cvtd_timestamp, new_window, num_window have very littile predicting power for the outcome 'classe'
-### These columns are the first seven column in the csv file
+Remove variable that does not contribute much to predict the the outcome 'classe'.
+Open the data csv file in xls, you can see that the index column, user_name, raw_timestamp_part_1, raw_timestamp_part_2, cvtd_timestamp, new_window, num_window have very littile predicting power for the outcome 'classe'. These columns are the first seven column in the csv file
 ```{r}
 trainingData <- training[, -c(1:7)]
 testingData <- testing[, -c(1:7)]
@@ -79,8 +75,8 @@ dim(trainingData)
 dim(testingData)
 ### [1] 20 53
 ```
-### The cleaned training data set contains 19622 observations and 53 variables.
-### The testing data set contains 20 observations and 53 variables. 
+The cleaned training data set contains 19622 observations and 53 variables.
+The testing data set contains 20 observations and 53 variables. 
 
 
 ## Data spliting
