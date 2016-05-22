@@ -2,7 +2,8 @@
 
 The is a project work for practical machine learning course. 
 
-Please click on project.Rmd to view the project assignment 
+##Please click on project.Rmd to view the project assignment 
+
 The R program created as a part of this project is Project.R
 
 The background of the project, goal of the project and the source location of data to be used in the project are given below
