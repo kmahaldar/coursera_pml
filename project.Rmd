@@ -7,17 +7,10 @@ output:
     fig_width: 10
 ---
 
-##  R package
-## Following packages are considered for the project , 
-### there are multiple ways to create the prediction 
-### few packages like caret , rpart are to be used in all possible solution
-### few packages like rattle , repmis are to be used depnding on developer's choice
-
-
 
 ##  Install required R packages
-## If any of the following packages are not yet installed , then install by running the line individually
 
+Following packages are considered for the project ,  there are multiple ways to create the prediction , few packages like caret , rpart are to be used in all possible solution,  few packages like rattle , repmis are to be used depnding on developer's choice
 ```{r} 
 install.packages("caret")
 install.packages("rpart")
