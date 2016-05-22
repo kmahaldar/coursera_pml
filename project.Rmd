@@ -1,7 +1,7 @@
 ---
 title: Practical Machine Learning Project Assignment
 author: "by Kaushik Mahaldar"
-output: html_document:
+output: html_document
 ---
 ### I have added the output from RStudio console in this rmd file , that is just for your conveneince, these results are commented out using '####' inside the R code chunk 
 
