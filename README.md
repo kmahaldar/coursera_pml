@@ -2,7 +2,7 @@
 
 The is a project work for practical machine learning course. 
 
-##Please click on project.Rmd to view the project assignment 
+##Please click on project.Rmd to view the project writeup assignment 
 
 The R program created as a part of this project is Project.R
 
